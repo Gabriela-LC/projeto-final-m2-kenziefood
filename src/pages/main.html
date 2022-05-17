@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
     <link rel="stylesheet" href="../styles/resetMain.css" />
-    <link rel="stylesheet" href="../styles/mainMobile.css" media="screen and (max-width: 720px)"/>
+    <link rel="stylesheet" href="../styles/main.css" media="screen and (min-width: 421px)"/>
+    <link rel="stylesheet" href="../styles/mainMobile.css" media="screen and (max-width: 420px)"/>
+
     <!-- pagina main -->
   </head>
   <body>
@@ -25,12 +27,12 @@
 
     </header>
     <nav>
-      <div id="filtragem">
-        <button class="btnFiltroTodos" id="btnFiltros">Todos</button>
-        <button id="btnPao" class="btnFiltro"><img src="../img/bread.svg" alt="pao" id="iconPao" class="iconFilter" >Panificadora</button>
-        <button id="btnFruta" class="btnFiltro"><img src="../img/fruits.svg" alt="fruta" id="iconFruta" class="iconFilter">Frutas</button>
-        <button id="btnBebida" class="btnFiltro"><img src="../img/drink.svg" alt="bebida" id="iconBebida" class="iconFilter">Bebidas</button>
-      </div>
+      <ul id="filtragem">
+       <li><button class="btnFiltroTodos" id="btnFiltros">Todos</button></li> 
+        <li><button id="btnPao" class="btnFiltro"><img src="../img/bread.svg" alt="pao" id="iconPao" class="iconFilter" >Panificadora</button> </li>
+        <li><button id="btnFruta" class="btnFiltro"><img src="../img/fruits.svg" alt="fruta" id="iconFruta" class="iconFilter">Frutas</button></li> 
+        <li><button id="btnBebida" class="btnFiltro"><img src="../img/drink.svg" alt="bebida" id="iconBebida" class="iconFilter">Bebidas</button></li>
+      </ul>
     </nav>
     <section>
     <!-- produtos -->
@@ -115,6 +117,7 @@
         </div>
       </li>
       <!-- ************** -->
+      
     </ul>
     </section>
       
