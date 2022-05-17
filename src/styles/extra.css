@@ -1,1 +1,82 @@
-/*estilizacao para a pagina extra*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@700&display=swap');
+html{
+    scroll-behavior:smooth;
+}
+header>section>div>h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 21.69px;
+    color:  #212529;
+
+}
+header>section>div>h2>span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16.27px;
+    color:#FF2253 ;
+}
+#pesquisa>input{
+    border: none;
+    background: #E9ECEF;
+    width:16rem;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    border-radius: 12px;
+    padding:15px 18px 15px 16px;
+    gap: 14px;
+}
+.pesquisa{
+    display: flex;
+    justify-content: center
+}
+.logo{
+    margin: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+#menus{
+    
+    margin-top: 10px;
+    display: flex;
+    gap: 4px;
+    overflow-x: scroll;
+}
+#menus>li{
+    margin-left: 10px;
+    padding:15px 20px 15px 20px;
+    background-color: #FFF7F4;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 32px;
+    line-height: 19.36px;
+    height: 48px;
+}
+#menus::-webkit-scrollbar{
+    display: none;
+}
+#adicionar{
+    border: none;
+    width:16rem;
+    background-color: #FF2253;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: white;
+    padding: 15px 20px 15px 20px;
+    border-radius: 32px;
+}
+.adicionar{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+#user{
+    width: 30px;
+    content: url('https://api.iconify.design/carbon/user-avatar-filled.svg?color=%23c4c4c4');
+}
+

@@ -4,11 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Extra</title>
-    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/src/styles/reset.css" />
     <link rel="stylesheet" href="../styles/extra.css" />
   </head>
   <body>
+    <header>
+      <section>
+        <div class="logo">
+          <h2>
+            Kenzie <span>Food</span> 
+          </h2>
+          <span id="user">
+          </span>
+        </div>
+        <div class="pesquisa">
+          <form action="" id="pesquisa">
+            <input type="search" placeholder="Pesquisar por produto">
+          </form>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <div class="adicionar">
+        <button id="adicionar">Adicionar novo produto</button>
+      </div>
+          <ul id="menus">
+            <li id="Todos">Todos</li>
+            <li id="Panificadora">Panificadora</li>
+            <li id="Frutas">Frutas</li>
+            <li id="Bebidas">Bebidas</li>
+          </ul>
+      </section>
+    </main>
     <script type="module" src="../js/extra.js"></script>
   </body>
 </html>

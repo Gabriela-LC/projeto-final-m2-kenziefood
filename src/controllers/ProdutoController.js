@@ -71,9 +71,4 @@ class Produto {
     imagem: "https://picsum.photos/200/300",
     descricao: "Bolo muito gostoso",
 }
-console.log(await Produto.listaProdutoPrivado())
-console.log(await Produto.alterarProduto(id,data))
-console.log()
-//Produto.postaProduto(data)
-//}
-export { Produto }
+
