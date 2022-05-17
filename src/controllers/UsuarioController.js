@@ -29,3 +29,4 @@ class Usuario {
 }
 
 export { Usuario };
+
