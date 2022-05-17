@@ -25,8 +25,4 @@ class Usuario {
         return usuario
     }
 }
-//excluir apos a arpovação
-Usuario.conectar({
-    email: "grupo1@gmail.com",
-   password: "1234"
-})
+export{ Usuario}

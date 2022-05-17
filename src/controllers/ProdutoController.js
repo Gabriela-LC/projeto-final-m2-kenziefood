@@ -25,6 +25,4 @@ class Produto {
     }
 
 }
-//excluir apos a arpovação
-console.log(await Produto.listaProdutoPublico())
-console.log(await Produto.listaProdutoPrivado())
+export{ Produto}
