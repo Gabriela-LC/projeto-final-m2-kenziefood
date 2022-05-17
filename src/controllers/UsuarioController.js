@@ -25,3 +25,4 @@ class Usuario {
         return usuario
     }
 }
+export{Usuario}

@@ -62,13 +62,5 @@ class Produto {
         return produto
     }
 }
-//apagar apos aprovação{
-    const id='22aa4fb7-d900-4ce8-902b-7643d6d34a09'
-    const data={
-    nome: "Bolinho Alterado",
-    preco: 2,
-    categoria: "Doce",
-    imagem: "https://picsum.photos/200/300",
-    descricao: "Bolo muito gostoso",
-}
+export{Produto}
 

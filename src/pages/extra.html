@@ -12,15 +12,12 @@
     <header>
       <section>
         <div class="logo">
-          <h2>
-            Kenzie <span>Food</span> 
-          </h2>
-          <span id="user">
-          </span>
+          <h2>Kenzie <span>Food</span></h2>
+          <span id="user"> </span>
         </div>
         <div class="pesquisa">
           <form action="" id="pesquisa">
-            <input type="search" placeholder="Pesquisar por produto">
+            <input type="search" placeholder="Pesquisar por produto" />
           </form>
         </div>
       </section>
@@ -28,16 +25,29 @@
     <main>
       <section>
         <div class="adicionar">
-        <button id="adicionar">Adicionar novo produto</button>
-      </div>
-          <ul id="menus">
-            <li id="Todos">Todos</li>
-            <li id="Panificadora">Panificadora</li>
-            <li id="Frutas">Frutas</li>
-            <li id="Bebidas">Bebidas</li>
-          </ul>
+          <button id="adicionar">Adicionar novo produto</button>
+        </div>
+        <ul id="menus">
+          <li id="Todos">Todos</li>
+          <li id="Panificadora">Panificadora</li>
+          <li id="Frutas">Frutas</li>
+          <li id="Bebidas">Bebidas</li>
+        </ul>
+      </section>
+      <section class="conteiner">
+        <div class="secao">
+          <h2>Produto</h2>
+          <h2 class="categ">Categorias</h2>
+          <h2 class="desc">Descrição</h2>
+          <h2 class="acos">Ações</h2>
+        </div>
+        <ul id="template">
+
+        </ul>
       </section>
     </main>
-    <script type="module" src="../js/extra.js"></script>
+    <script type="module" src="/src/controllers/ProdutoController.js"></script>
+    <script type="module" src="/src/models/Dashboard.js"></script>
+    <script type="module" src="/src/models/Dashboard_Template.js"></script>
   </body>
 </html>
