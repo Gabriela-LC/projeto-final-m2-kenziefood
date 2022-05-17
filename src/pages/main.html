@@ -5,11 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
-    <link rel="stylesheet" href="./src/styles/reset.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/resetMain.css" />
+    <link rel="stylesheet" href="../styles/mainMobile.css" media="screen and (max-width: 720px)"/>
     <!-- pagina main -->
   </head>
   <body>
+    <header>
+      <div id="logoKenzie" class="styleLogoKenzie">
+        <h1 id="Kenzie">Kenzie</h1>
+        <p id="pFood">Food</p>
+      </div>
+      <div id="barraPesquisa" class="pesquisaStyle">
+        <figure class="iconPesquisa">
+          <img src="../img/lupa.png" alt="lupa" id="lupa">
+      </figure>
+      <input type="text" placeholder="Pesquisar por produto" id="inputSearch">
+      
+      </div>
+
+    </header>
+    <nav>
+      <div id="filtragem">
+        <button class="btnFiltroTodos" id="btnFiltros">Todos</button>
+        <button id="btnPao" class="btnFiltro"><img src="../img/bread.svg" alt="pao" id="iconPao" class="iconFilter" >Panificadora</button>
+        <button id="btnFruta" class="btnFiltro"><img src="../img/fruits.svg" alt="fruta" id="iconFruta" class="iconFilter">Frutas</button>
+        <button id="btnBebida" class="btnFiltro"><img src="../img/drink.svg" alt="bebida" id="iconBebida" class="iconFilter">Bebidas</button>
+      </div>
+    </nav>
+    <section>
+    <!-- produtos -->
+    <ul id="containerProdutos">
+      <li class="cardProduto">
+        <figure class="produtoImg">
+            <img src="../img/vinho.png" alt="">
+        </figure>
+
+        <h3 class="produtoNome">Vinho</h3>
+
+        <p class="produtoInformacao"> O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
+
+        <span class="produtoPreco">R$ 38.00</span>
+
+        <div class="addCarrinho">
+            <img src="../img/carrinho.svg" alt="">
+        </div>
+      </li>
+      <!-- ************** -->
+      <li class="cardProduto">
+        <figure class="produtoImg">
+            <img src="../img/vinho.png" alt="">
+        </figure>
+
+        <h3 class="produtoNome">Vinho</h3>
+
+        <p class="produtoInformacao"> O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
+
+        <span class="produtoPreco">R$ 38.00</span>
+
+        <div class="addCarrinho">
+            <img src="../img/carrinho.svg" alt="">
+        </div>
+      </li>
+      <!-- ****************************** -->
+      <li class="cardProduto">
+        <figure class="produtoImg">
+            <img src="../img/vinho.png" alt="">
+        </figure>
+
+        <h3 class="produtoNome">Vinho</h3>
+
+        <p class="produtoInformacao"> O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
+
+        <span class="produtoPreco">R$ 38.00</span>
+
+        <div class="addCarrinho" >
+            <img src="../img/carrinho.svg" alt="">
+        </div>
+      </li>
+      <!-- ****************************** -->
+      <li class="cardProduto">
+        <figure class="produtoImg">
+            <img src="../img/vinho.png" alt="">
+        </figure>
+
+        <h3 class="produtoNome">Vinho</h3>
+
+        <p class="produtoInformacao"> O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
+
+        <span class="produtoPreco">R$ 38.00</span>
+
+        <div class="addCarrinho">
+            <img src="../img/carrinho.svg" alt="">
+        </div>
+      </li>
+      <!-- ******************************* -->
+      <li class="cardProduto">
+        <figure class="produtoImg">
+            <img src="../img/vinho.png" alt="">
+        </figure>
+
+        <h3 class="produtoNome">Vinho</h3>
+
+        <p class="produtoInformacao"> O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
+
+        <span class="produtoPreco">R$ 38.00</span>
+
+        <div class="addCarrinho" >
+            <img src="../img/carrinho.svg" alt="">
+        </div>
+      </li>
+      <!-- ************** -->
+    </ul>
+    </section>
+      
+    <footer>
+        <button id="btnCarrinho">carrinho</button>                 
+    </footer>
+
+
     <script type="module" src="../js/main.js"></script>
   </body>
 </html>
+
+
+
+
+ 
