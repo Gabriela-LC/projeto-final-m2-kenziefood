@@ -23,15 +23,13 @@ class Usuario {
     })
       .then((res) => res.json())
       .then((res) => {
-        localStorage.clear()
-        localStorage.setItem("token", res)
-        window.location = "../pages/main.html"
+        localStorage.clear();
+        localStorage.setItem("token", res);
+        window.location = "../pages/main.html";
       })
       .catch((err) => console.error(err));
     return usuario;
   }
 }
-Usuario.conectar({email: "grupo1@gmail.com",
-password: "1234"})
-export { Usuario };
 
+export { Usuario };
