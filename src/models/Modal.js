@@ -133,7 +133,7 @@ class Modal {
                 Template.template()
                 externo.remove()
             })
-            excluir.addEventListener('click',(e)=>{
+            buttonDeletar.addEventListener('click',(e)=>{
                 e.preventDefault()
                 ModalPequeno.Deletar(id)
                 Template.template()

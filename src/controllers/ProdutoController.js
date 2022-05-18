@@ -1,3 +1,5 @@
+import { ModalPequeno } from "../models/Modal_pequenos.js";
+
 class Produto {
   static BASE_URL = "https://api-kenzie-food.herokuapp.com";
   static async listaProdutoPublico() {
@@ -35,8 +37,14 @@ class Produto {
       body: JSON.stringify(body),
     })
       .then((res) => res.json())
-      .then((res) => res)
-      .catch((err) => console.error(err));
+      .then((res) => {
+        ModalPequeno.modalAvisos("Produto adicionado com sucesso",true)
+        return res
+      })
+      .catch((err) => {
+        ModalPequeno.modalAvisos("Ocorreu algum erro, o produto não foi adicionado!",false)
+        console.error(err)
+      });
     return produto;
   }
   static async alterarProduto(id, body) {
@@ -49,8 +57,14 @@ class Produto {
       body: JSON.stringify(body),
     })
       .then((res) => res.json())
-      .then((res) => res)
-      .catch((err) => console.error(err));
+      .then((res) => {
+        ModalPequeno.modalAvisos("Produto alterado com sucesso",true)
+        return res
+      })
+      .catch((err) =>{ 
+        ModalPequeno.modalAvisos("Ocorreu algum erro, o produto não foi Aterado!",false)
+        console.error(err)
+      } );
     return produto;
   }
   static async deletarProduto(id) {
@@ -60,7 +74,7 @@ class Produto {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
-    })
+    }).then(ModalPequeno.modalAvisos("Produto deletado com sucesso",true))
       .catch((err) => console.error(err));
     return produto;
   }
