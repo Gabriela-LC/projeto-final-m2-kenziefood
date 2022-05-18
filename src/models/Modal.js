@@ -2,6 +2,7 @@
 import { Produto } from "../controllers/ProdutoController.js"
 import { Template } from "./Dashboard_Template.js"
 import { Formulario } from "./Formulario.js"
+import { ModalPequeno } from "./Modal_pequenos.js"
 
 class Modal {
     static async modal(titulo,id) {
@@ -129,6 +130,12 @@ class Modal {
             form.addEventListener('submit', async (e) => {
                 Formulario.requesFrom(e)
                await Produto.alterarProduto(id,Formulario.value)
+                Template.template()
+                externo.remove()
+            })
+            excluir.addEventListener('click',(e)=>{
+                e.preventDefault()
+                ModalPequeno.Deletar(id)
                 Template.template()
                 externo.remove()
             })

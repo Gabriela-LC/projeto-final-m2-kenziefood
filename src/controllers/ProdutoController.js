@@ -61,8 +61,6 @@ class Produto {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     })
-      .then((res) => res.json())
-      .then((res) => res)
       .catch((err) => console.error(err));
     return produto;
   }

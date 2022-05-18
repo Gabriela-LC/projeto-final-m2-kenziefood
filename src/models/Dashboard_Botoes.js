@@ -1,5 +1,6 @@
 import { Produto } from "../controllers/ProdutoController.js"
 import { Modal } from "./Modal.js"
+import { ModalPequeno } from "./Modal_pequenos.js"
 
 //salva id dos botoes
 class Botoes {
@@ -12,7 +13,7 @@ class Botoes {
     static Deletar(e) {
         this.id=""
         this.id=e.target.id
-        
+        ModalPequeno.Deletar()
     }
     static adicionar(){
         const adicionar=document.getElementById("adicionar")
