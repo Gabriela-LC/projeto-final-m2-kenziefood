@@ -157,7 +157,6 @@ class Modal {
             externo.remove()
         })
     }  
-    
 }
 
 export { Modal }
