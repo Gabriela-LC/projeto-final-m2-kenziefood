@@ -31,25 +31,23 @@ class Card {
   }
 
   static processoCarrinho(event) {
-    const id = event.path[1].id;
-    const img = event.path[1].children[0].children[0].src;
-    const nomeProduto = event.path[1].children[1].innerText;
-    const categoria = event.path[1].children[1].id;
-    const preco = Number(
-      event.path[1].children[3].innerText.slice(3).replace(",", ".")
-    );
-    const produto = {
-      img: img,
-      name: nomeProduto,
-      categoria: categoria,
-      preco: preco,
-      id: id,
-    };
-
+    //   const id = event.path[1].id;
+    //   const img = event.path[1].children[0].children[0].src;
+    //   const nomeProduto = event.path[1].children[1].innerText;
+    //   const categoria = event.path[1].children[1].id;
+    //   const preco = Number(
+    //     event.path[1].children[3].innerText.slice(3).replace(",", ".")
+    //   );
+    //   const produto = {
+    //     img: img,
+    //     name: nomeProduto,
+    //     categoria: categoria,
+    //     preco: preco,
+    //     id: id,
+    //   };
     //concatenar aqui index e o nome
     //ex: cart - panqueca // cart - sanduiche
     //fazer loop e pegar todos???
-
     //   function allStorage() {
     //     var values = [],
     //         keys = Object.keys(localStorage),
@@ -59,9 +57,8 @@ class Card {
     //     }
     //     return values;
     // }
-
-    localStorage.setItem(produto.name, JSON.stringify(produto));
-    const produtoAtt = JSON.parse(localStorage.getItem(`${produto.name}`));
+    // localStorage.setItem(produto.name, JSON.stringify(produto));
+    // const produtoAtt = JSON.parse(localStorage.getItem(`${produto.name}`));
     // console.log(typeof produtoAtt);
     // this.adicionaCardCarrinho(produtoAtt);
   }
