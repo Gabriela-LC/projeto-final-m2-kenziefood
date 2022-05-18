@@ -72,7 +72,7 @@ class Produto {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Authorization": `Bearer ${localStorage.getItem("token")}`,
       },
     }).then(ModalPequeno.modalAvisos("Produto deletado com sucesso",true))
       .catch((err) => console.error(err));

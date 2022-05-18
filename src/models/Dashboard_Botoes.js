@@ -22,6 +22,14 @@ class Botoes {
             Modal.modal("Cadastro de produto")
         })
     }
+    static Logout(){
+        const logout=document.getElementById("user")
+        logout.addEventListener('click',(e)=>{
+            e.preventDefault()
+            ModalPequeno.logout()
+        })
+    }
 }
+Botoes.Logout()
 Botoes.adicionar()
 export { Botoes }

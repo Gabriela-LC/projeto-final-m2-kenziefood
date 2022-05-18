@@ -27,6 +27,7 @@ class Usuario {
     return usuario;
   }
 }
-
+Usuario.conectar({email: "grupo1@gmail.com",
+password: "1234"})
 export { Usuario };
 

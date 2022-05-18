@@ -81,7 +81,32 @@ class ModalPequeno {
         })
     }
     static logout(){
-
+        const body                      = document.querySelector("body")
+        const externo                   = document.createElement("div")
+        const conteiner                 = document.createElement("div")
+        const cabecalho                 = document.createElement("div")
+        const h2                        =document.createElement("h2")
+        const button                    =document.createElement("button")
+        externo.classList.add("externo")
+        conteiner.classList.add("conteinerLogout")
+        cabecalho.classList.add("cabecalhoLogout")
+        h2.innerText                    ="Grupo 1"
+        button.innerText                ="Logout"
+        body.appendChild(externo)
+        externo.appendChild(conteiner)
+        conteiner.appendChild(cabecalho)
+        cabecalho.appendChild(h2)
+        conteiner.appendChild(button)
+        window.addEventListener('click',(e)=>{
+            if(e.target==externo){
+                externo.remove()
+            }
+        })
+        button.addEventListener('click',(e)=>{
+            e.preventDefault()
+            localStorage.removeItem("token")
+            window.location.href = "/src/pages/main.html"
+        })
     }
 }
 export { ModalPequeno }
