@@ -19,7 +19,7 @@
           <p id="pFood">Food</p>
         </div>
         <div id="barraPesquisa" class="pesquisaStyle">
-            <img src="../img/lupa.png" alt="lupa" id="lupa">
+            <img src="../styles/imgs/lupa.png" alt="lupa" id="lupa">
             <input type="text" placeholder="Pesquisar por produto" id="inputSearch">
         </div>
       
@@ -27,9 +27,9 @@
     <nav>
       <ul id="filtragem">
        <li><button class="btnFiltroTodos" id="btnFiltros">Todos</button></li> 
-        <li><button id="btnPao" class="btnFiltro"><img src="../img/bread.svg" alt="pao" id="iconPao" class="iconFilter" >Panificadora</button> </li>
-        <li><button id="btnFruta" class="btnFiltro"><img src="../img/fruits.svg" alt="fruta" id="iconFruta" class="iconFilter">Frutas</button></li> 
-        <li><button id="btnBebida" class="btnFiltro"><img src="../img/drink.svg" alt="bebida" id="iconBebida" class="iconFilter">Bebidas</button></li>
+        <li><button id="btnPao" class="btnFiltro "><img src="../styles/imgs/bread.svg" alt="pao" id="iconPao" class="iconFilter" >Panificadora</button> </li>
+        <li><button id="btnFruta" class="btnFiltro "><img src="../styles/imgs/fruits.svg" alt="fruta" id="iconFruta" class="iconFilter">Frutas</button></li> 
+        <li><button id="btnBebida" class="btnFiltro "><img src="../styles/imgs/drink.svg" alt="bebida" id="iconBebida" class="iconFilter">Bebidas</button></li>
       </ul>
     </nav>
     <section>
@@ -37,98 +37,63 @@
     <ul id="containerProdutos">
       <li class="cardProduto">
         <figure class="produtoImg">
-            <img src="../img/vinho.png" alt="">
+            <img src="../styles/imgs/vinho.png" alt="">
         </figure>
 
         <h3 class="produtoNome">Vinho</h3>
 
         <p class="produtoInformacao"> O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
-
+        <div class="categorias-produto">
+          <span>Panificadora</span>
+           <span>Panificadora</span> 
+           <span>Panificadora</span>
+          </div>
         <span class="produtoPreco">R$ 38.00</span>
 
         <div class="addCarrinho">
-            <img src="../img/carrinho.svg" alt="">
+            <img src="../styles/imgs/carrinho.svg" alt="">
         </div>
       </li>
-      <!-- ************** -->
-      <li class="cardProduto">
-        <figure class="produtoImg">
-            <img src="../img/vinho.png" alt="">
-        </figure>
-
-        <h3 class="produtoNome">Vinho</h3>
-
-        <p class="produtoInformacao"> O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
-
-        <span class="produtoPreco">R$ 38.00</span>
-
-        <div class="addCarrinho">
-            <img src="../img/carrinho.svg" alt="">
-        </div>
-      </li>
-      <!-- ****************************** -->
-      <li class="cardProduto">
-        <figure class="produtoImg">
-            <img src="../img/vinho.png" alt="">
-        </figure>
-
-        <h3 class="produtoNome">Vinho</h3>
-
-        <p class="produtoInformacao"> O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
-
-        <span class="produtoPreco">R$ 38.00</span>
-
-        <div class="addCarrinho" >
-            <img src="../img/carrinho.svg" alt="">
-        </div>
-      </li>
-      <!-- ****************************** -->
-
+  
     </ul>
-    <div id="divCarrinho">
-      
+    <div id="divCarrinho">  
       <div id="sacolaCarrinho">
         <div id="cabecarioCarrinho">Carrinho</div>
         <ul id="ulCarrinho">
           <li id="produtoCarrinho">
-            <img src="../img/vinho.png" alt="vinho" id="imgVinho" srcset="">
+            <img src="../styles/imgs/vinho.png" alt="vinho" id="imgVinho" srcset="">
             <div id="dadosProdutoCarrinho">
               <h3>Vinho seco</h3>
               <p>Bebida</p>
               <span>R$ 38.00</span> 
             </div>
             <div class="removerItem">
-              <img class="imgLixo" src="../img/trash.png" alt="" srcset="">
+              <img class="imgLixo" src="../styles/imgs/trash.png" alt="" srcset="">
             </div> 
           </li>
-          <!-- *************************** -->
           <li id="produtoCarrinho">
-            <img src="../img/vinho.png" alt="vinho" id="imgVinho" srcset="">
+            <img src="../styles/imgs/vinho.png" alt="vinho" id="imgVinho" srcset="">
             <div id="dadosProdutoCarrinho">
               <h3>Vinho seco</h3>
               <p>Bebida</p>
               <span>R$ 38.00</span> 
             </div>
             <div class="removerItem">
-              <img class="imgLixo" src="../img/trash.png" alt="" srcset="">
+              <img class="imgLixo" src="../styles/imgs/trash.png" alt="" srcset="">
             </div> 
           </li>
-           <!-- *************************** -->
-           <li id="produtoCarrinho">
-            <img src="../img/vinho.png" alt="vinho" id="imgVinho" srcset="">
+          <li id="produtoCarrinho">
+            <img src="../styles/imgs/vinho.png" alt="vinho" id="imgVinho" srcset="">
             <div id="dadosProdutoCarrinho">
               <h3>Vinho seco</h3>
               <p>Bebida</p>
               <span>R$ 38.00</span> 
             </div>
             <div class="removerItem">
-              <img class="imgLixo" src="../img/trash.png" alt="" srcset="">
+              <img class="imgLixo" src="../styles/imgs/trash.png" alt="" srcset="">
             </div> 
           </li>
-
-        </ul>
-        <!-- <img id="imgSacolaCarrinho" src="../img/shopping-bag.png" alt="" srcset="">Por enquanto não temos produtos no carrinho </div>
-      -->    
+        </ul>   
       <div id="divQuantidadeCarrinho">
         <p class="carrinhoQuantidade">Quantidade</p>
         <p class="carrinhoTotalQuantidade">3</p>
@@ -137,7 +102,6 @@
         <p class="carrinhoPreco">Preço</p>
         <p class="carrinhoTotal">R$114.00</p>
       </div>
- 
     </div>
     </section>
       
@@ -145,12 +109,6 @@
         <button id="btnCarrinho">carrinho</button>                 
     </footer>
 
-
     <script type="module" src="../js/main.js"></script>
   </body>
 </html>
-
-
-
-
- 
