@@ -448,6 +448,19 @@ input[type="radio"]:checked + label {
   flex-direction: column;
   align-items: center;
 }
+.conteinerLogout {
+  display: flex;
+  margin-top: 40px;
+  position: absolute;
+  right: 3px;
+  width: 10rem;
+  margin-right: 15px;
+  height: 110px;
+  background-color: #ffff;
+  border-radius: 0 0 8px 8px;
+  flex-direction: column;
+  align-items: center;
+}
 .cabecalhoLogout {
   width: 100%;
   height: 47px;
