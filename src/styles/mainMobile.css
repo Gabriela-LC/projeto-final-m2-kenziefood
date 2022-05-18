@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@media(max-width:551px){
+	#divCarrinho{display:none;}
+    
+}
 body{
     background-color: #F5F5F5;
    
@@ -295,8 +299,5 @@ section{
     
 } 
 #filtragem::-webkit-scrollbar { 
-	display: none;
-}
-#containerProdutos::-webkit-scrollbar { 
 	display: none;
 }
