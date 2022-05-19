@@ -1,4 +1,5 @@
-import { Produto } from "../controllers/ProdutoController.js"
+
+import { Filtrar } from "./Dashboard_Filtrar.js"
 import { Modal } from "./Modal.js"
 import { ModalPequeno } from "./Modal_pequenos.js"
 
@@ -29,7 +30,15 @@ class Botoes {
             ModalPequeno.logout()
         })
     }
+    static botoesMenu(){
+        const todos=document.getElementById("Todos")
+        const Panificadora=document.getElementById("Panificadora")
+        const Frutas=document.getElementById("Frutas")
+        const Bebidas=document.getElementById("Bebidas")
+        todos.addEventListener('click',(e)=>Filtrar.filtroBotoes(e))
+        Panificadora.addEventListener('click',(e)=>Filtrar.filtroBotoes(e))
+        Frutas.addEventListener('click',(e)=>Filtrar.filtroBotoes(e))
+        Bebidas.addEventListener('click',(e)=>Filtrar.filtroBotoes(e))
+    }
 }
-Botoes.Logout()
-Botoes.adicionar()
 export { Botoes }

@@ -2,7 +2,12 @@
 html {
   scroll-behavior: smooth;
 }
-
+body{
+  margin-left: 10px;
+}
+button{
+  cursor: pointer;
+}
 header > section > div > h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -37,13 +42,17 @@ header > section > div > h2 > span {
   align-items: center;
   margin-bottom: 20px;
 }
-#menus {
+.menus>.Selecionado{
+  background-color: #FF2253;
+  color: #F8F9FA;
+}
+.menus {
   margin-top: 10px;
   display: flex;
   gap: 4px;
   overflow-x: scroll;
 }
-#menus > li {
+.menus > li {
   margin-left: 10px;
   padding: 15px 20px 15px 20px;
   background-color: #fff7f4;
@@ -54,8 +63,9 @@ header > section > div > h2 > span {
   border-radius: 32px;
   line-height: 19.36px;
   height: 48px;
+  cursor: pointer;
 }
-#menus::-webkit-scrollbar {
+.menus::-webkit-scrollbar {
   display: none;
 }
 #adicionar {
@@ -74,11 +84,11 @@ header > section > div > h2 > span {
   justify-content: center;
 }
 #user {
-  width: 30px;
+  width: 3.5rem;
   content: url("https://api.iconify.design/carbon/user-avatar-filled.svg?color=%23c4c4c4");
 }
 .secao {
-  width: 100%;
+
   display: flex;
   margin-left: 50px;
   font-family: "Poppins", sans-serif;
@@ -124,12 +134,13 @@ header > section > div > h2 > span {
   gap: 15px;
 }
 .conteiner::-webkit-scrollbar {
-  display: none;
+  
 }
 .conteiner {
   margin-top: 15px;
   overflow-x: scroll;
   height: 100%;
+  
 }
 .cartegoria {
   max-width: 5rem;
@@ -191,6 +202,7 @@ header > section > div > h2 > span {
   justify-content: center;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
 }
 .cabecalho {
   background: #f8f9fa;
@@ -441,6 +453,19 @@ input[type="radio"]:checked + label {
   position: absolute;
   right: 3px;
   width: 10rem;
+  height: 110px;
+  background-color: #ffff;
+  border-radius: 0 0 8px 8px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.15);
+}
+.conteinerLogout {
+  display: flex;
+  margin-top: 40px;
+  position: absolute;
+  right: 3px;
+  width: 10rem;
   margin-right: 15px;
   height: 110px;
   background-color: #ffff;
@@ -487,4 +512,71 @@ input[type="radio"]:checked + label {
   text-align: center;
   align-items: center;
   justify-content: center;
+  
+}
+.logo{
+  box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.80);
+  height: 70px;
+  margin: 0;
+  margin-bottom: 15px;
+  position: static;
+  left: 0;
+}
+
+@media (min-width:700px){
+  body{
+    margin-left: 20px;
+  }
+    #pesquisa{
+      position: absolute;
+      top:14px ;
+      right: 7rem;
+      
+    }
+    .adicionar{
+      justify-content: flex-end;
+      margin-right: 110px;
+      margin-bottom: 30px;
+    }
+    #template > li{
+      width: 50rem;
+    }
+    #Formulario{
+      width: 25rem;
+    }
+    .radio{
+      margin-top: 10px;
+      width: 24rem;
+    }
+    .cabecalho{
+      width: 100%;
+    }
+    .secao{
+      width: 30rem;
+    }
+    .descricao{
+      margin-left: 32px;
+    }
+  
+  .acos{
+    margin-left: 310px;
+  }
+  #user{
+    width: 4rem;
+  }
+  .desc{
+margin-left: 4rem;
+  }
+  @media (min-width:850px){
+    body{
+      margin-left: 20px;
+    }
+    #template > li{
+      
+      width: 50rem;
+    }
+    .conteiner{
+      overflow: hidden;
+    }
+  }
 }
