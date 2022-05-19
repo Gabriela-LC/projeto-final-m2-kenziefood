@@ -1,5 +1,6 @@
 import { Produto } from "../controllers/ProdutoController.js"
 import { Botoes } from "./Dashboard_Botoes.js"
+import { Filtrar } from "./Dashboard_Filtrar.js"
 import { Template } from "./Dashboard_Template.js"
 
 class ModalPequeno {
@@ -42,7 +43,7 @@ class ModalPequeno {
         sim.addEventListener('click', async (e) => {
             e.preventDefault()
             await Produto.deletarProduto(Botoes.id)
-            Template.template()
+            Template.template(await Filtrar.api())
             externo.remove()
         })
         button.addEventListener('click', async (e) => {
