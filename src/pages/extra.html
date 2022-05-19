@@ -17,7 +17,7 @@
         </div>
         <div class="pesquisa">
           <form action="" id="pesquisa">
-            <input type="search" placeholder="Pesquisar por produto" />
+            <input id="pesquisar" type="search" placeholder="Pesquisar por produto" />
           </form>
         </div>
       </section>
@@ -27,8 +27,8 @@
         <div class="adicionar">
           <button id="adicionar">Adicionar novo produto</button>
         </div>
-        <ul id="menus">
-          <li id="Todos">Todos</li>
+        <ul class="menus">
+          <li id="Todos" class="Selecionado" >Todos</li>
           <li id="Panificadora">Panificadora</li>
           <li id="Frutas">Frutas</li>
           <li id="Bebidas">Bebidas</li>
@@ -48,5 +48,7 @@
     <script type="module" src="/src/controllers/ProdutoController.js"></script>
     <script type="module" src="/src/models/Dashboard.js"></script>
     <script type="module" src="/src/models/Dashboard_Template.js"></script>
+    <script type="module" src="/src/models/Dashboard_Filtrar.js"></script>
+    <script type="module" src="/src/js/chamarProduto.js"></script>
   </body>
 </html>
