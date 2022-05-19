@@ -1,5 +1,6 @@
 
 import { Produto } from "../controllers/ProdutoController.js"
+import { Filtrar } from "./Dashboard_Filtrar.js"
 import { Template } from "./Dashboard_Template.js"
 import { Formulario } from "./Formulario.js"
 import { ModalPequeno } from "./Modal_pequenos.js"
@@ -130,13 +131,13 @@ class Modal {
             form.addEventListener('submit', async (e) => {
                 Formulario.requesFrom(e)
                await Produto.alterarProduto(id,Formulario.value)
-                Template.template()
+                Template.template(await Filtrar.api())
                 externo.remove()
             })
-            buttonDeletar.addEventListener('click',(e)=>{
+            buttonDeletar.addEventListener('click',async (e)=>{
                 e.preventDefault()
                 ModalPequeno.Deletar(id)
-                Template.template()
+                Template.template(await Filtrar.api())
                 externo.remove()
             })
             
@@ -147,7 +148,7 @@ class Modal {
             form.addEventListener('submit', async (e) => {
                  Formulario.requesFrom(e)
                  await Produto.postaProduto(Formulario.value)
-                 Template.template()
+                 Template.template(await Filtrar.api())
                  externo.remove()
              })
          }

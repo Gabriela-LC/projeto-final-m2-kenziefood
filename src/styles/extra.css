@@ -37,13 +37,17 @@ header > section > div > h2 > span {
   align-items: center;
   margin-bottom: 20px;
 }
-#menus {
+.menus>.Selecionado{
+  background-color: #FF2253;
+  color: #F8F9FA;
+}
+.menus {
   margin-top: 10px;
   display: flex;
   gap: 4px;
   overflow-x: scroll;
 }
-#menus > li {
+.menus > li {
   margin-left: 10px;
   padding: 15px 20px 15px 20px;
   background-color: #fff7f4;
@@ -55,7 +59,7 @@ header > section > div > h2 > span {
   line-height: 19.36px;
   height: 48px;
 }
-#menus::-webkit-scrollbar {
+.menus::-webkit-scrollbar {
   display: none;
 }
 #adicionar {

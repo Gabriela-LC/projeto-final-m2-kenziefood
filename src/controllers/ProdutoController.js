@@ -38,12 +38,15 @@ class Produto {
     })
       .then((res) => res.json())
       .then((res) => {
-        ModalPequeno.modalAvisos("Produto adicionado com sucesso",true)
-        return res
+        ModalPequeno.modalAvisos("Produto adicionado com sucesso", true);
+        return res;
       })
       .catch((err) => {
-        ModalPequeno.modalAvisos("Ocorreu algum erro, o produto não foi adicionado!",false)
-        console.error(err)
+        ModalPequeno.modalAvisos(
+          "Ocorreu algum erro, o produto não foi adicionado!",
+          false
+        );
+        console.error(err);
       });
     return produto;
   }
@@ -58,13 +61,16 @@ class Produto {
     })
       .then((res) => res.json())
       .then((res) => {
-        ModalPequeno.modalAvisos("Produto alterado com sucesso",true)
-        return res
+        ModalPequeno.modalAvisos("Produto alterado com sucesso", true);
+        return res;
       })
-      .catch((err) =>{ 
-        ModalPequeno.modalAvisos("Ocorreu algum erro, o produto não foi Aterado!",false)
-        console.error(err)
-      } );
+      .catch((err) => {
+        ModalPequeno.modalAvisos(
+          "Ocorreu algum erro, o produto não foi Aterado!",
+          false
+        );
+        console.error(err);
+      });
     return produto;
   }
   static async deletarProduto(id) {
@@ -72,12 +78,15 @@ class Produto {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${localStorage.getItem("token")}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
-    }).then(ModalPequeno.modalAvisos("Produto deletado com sucesso",true))
+    })
+      .then((e) =>
+        ModalPequeno.modalAvisos("Produto deletado com sucesso", true)
+      )
       .catch((err) => console.error(err));
     return produto;
   }
 }
-
+Produto.listaProdutoPrivado()
 export { Produto };

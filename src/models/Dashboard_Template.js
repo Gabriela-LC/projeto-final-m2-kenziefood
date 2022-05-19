@@ -2,8 +2,11 @@ import { Produto } from "../controllers/ProdutoController.js"
 import { Botoes } from "./Dashboard_Botoes.js";
 // cria template
 class Template {
-   static async template() {
+   static async api(){
       const produtos = await Produto.listaProdutoPrivado()
+      return produtos
+   }
+   static async template(produtos) {
       const ul = document.getElementById("template")
       ul.innerHTML = ""
       produtos.forEach(element => {
@@ -57,5 +60,8 @@ class Template {
       });
    }
 }
-Template.template()
+Botoes.botoesMenu()
+Botoes.Logout()
+Botoes.adicionar()
+Template.template(await Template.api())
 export{Template}
