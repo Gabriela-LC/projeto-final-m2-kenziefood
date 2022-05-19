@@ -56,5 +56,5 @@ class Template {
     });
   }
 }
-Template.template();
+// Template.template();
 export { Template };
