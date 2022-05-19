@@ -15,6 +15,11 @@ class Card {
     const p = document.createElement("p");
     p.classList.add("produtoInformacao");
     p.innerText = data.descricao;
+    const categoriaProduto = document.createElement("div");
+    categoriaProduto.classList.add("categorias-produto");
+    const categoriaSpan = document.createElement("span");
+    categoriaSpan.innerText = data.categoria;
+    categoriaProduto.appendChild(categoriaSpan);
     const span = document.createElement("span");
     span.classList.add("produtoPreco");
     span.innerText = `R$ ${data.preco.toFixed(2).replace(".", ",")}`;
@@ -25,7 +30,7 @@ class Card {
     logoCarrinho.src = "../styles/imgs/carrinho.svg";
     div.appendChild(logoCarrinho);
     div.addEventListener("click", this.processoCarrinho);
-    produto.append(figure, h3, p, span, div);
+    produto.append(figure, h3, p, categoriaProduto, span, div);
 
     return produto;
   }
