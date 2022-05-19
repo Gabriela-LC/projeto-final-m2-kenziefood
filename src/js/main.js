@@ -52,3 +52,5 @@ function filtraBarraPesquisa(palavra) {
 }
 
 populaLoja(listaProdutosApi);
+
+Card.verificaLocalStorage();
