@@ -55,15 +55,19 @@ header {
   color: #ff2253;
 }
 #barraPesquisa {
-  width: 22%;
+  
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  justify-content: center;
+  width: 35%;
   height: 49px;
-  align-items: center;
-  border-radius: 12px;
-  font-size: 0;
+ 
+ 
 }
 #inputSearch {
-  position: relative;
-  width: 100%;
+  
+  width: 320px;
   height: 47px;
   background-color: #e9ecef;
   border: none;
@@ -71,7 +75,7 @@ header {
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  float: right;
+  
 }
 #lupa {
   position: absolute;
@@ -187,8 +191,7 @@ nav {
 section {
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  height: 100vh;
+  width: 1;
 }
 #containerProdutos {
   width: 70vw;
@@ -338,8 +341,8 @@ footer {
 }
 
 #sacolaCarrinho {
-  position: absolute;
-  /* position: fixed; */
+  margin-bottom: 180px;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -485,6 +488,59 @@ button {
   display: flex;
   gap: 20px;
 }
+#bntLoginLogout{
+  font-size: 20px;
+  width: 60px;
+  height: 40%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+#containerHomeDash{
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  width: 60%;
+  height: 40%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  justify-content: center;
+  height: 10px;
+  
+}
+
+#paginaHome{
+  cursor: pointer;
+}
+
+#paginaDash{
+  margin-left: 20px;
+  cursor: pointer;
+}
+.statusPaginaOn{
+color: #000000;
+}
+
+.statusPaginaOf{
+color: #868e96;
+}
+#containerIconeLogin{
+  text-align: center;
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#containerHomeDash a{
+  text-decoration: none
+}
+
+
 
 /* .carrinhoPreco,
 .carrinhoTotal {

@@ -1,7 +1,48 @@
-import { Produto } from "../controllers/ProdutoController.js";
+/* import { Produto } from "../controllers/ProdutoController.js";
 import { Card } from "../models/CriarCards.js";
 
-function criaCard(data) {}
+function criaCard(data) {} */
+
+class paginasPerfil{
+
+    static clickLogin(event){
+
+        const getNome = event.target
+        
+        const containerHomeDash = document.getElementById("containerHomeDash")
+        const ImagemPerfilUsuario = document.getElementById("ImagemPerfilUsuario")
+        const bntLoginLogout = document.getElementById("bntLoginLogout")
+        const divPagina =  `<a href="../pages/main.html"><h2 id="paginaHome" class="statusPaginaOn">Home</h2></a>
+                            <a href="../pages/extra.html"><h2 id="paginaDash" class="statusPaginaOf">Dashboard</h2></a>`
+    
+        if(getNome.innerHTML==="Login"){
+
+            
+            bntLoginLogout.innerHTML="Logout"
+            containerHomeDash.innerHTML= divPagina
+            ImagemPerfilUsuario.src="../styles/imgs/iconeUsuario.png"
+        }
+        else if(getNome.innerHTML==="Logout"){
+            getNome.innerHTML="Login"
+            ImagemPerfilUsuario.src=""
+            containerHomeDash.innerHTML= ""
+        }
+
+    }
+    static trocaPagina(){
+
+    }
+}
+
+
+
+
+
+
+
+const btnLoginHome = document.getElementById("bntLoginLogout")
+btnLoginHome.addEventListener("click",paginasPerfil.clickLogin)
+
 
 // function populaLoja() {}
 
