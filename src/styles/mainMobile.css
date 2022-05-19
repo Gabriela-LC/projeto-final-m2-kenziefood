@@ -310,3 +310,25 @@ section {
   display: flex;
   gap: 20px;
 }
+
+.divBotoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.divBotoes button {
+  box-sizing: border-box;
+  background-color: #ff2253;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 32px;
+  font-size: 15px;
+  margin-top: 15px;
+  width: 110px;
+}
+.divBotoes button:hover {
+  background-color: #ffffff;
+  color: #ff2253;
+  cursor: pointer;
+}
