@@ -119,7 +119,7 @@ header > section > div > h2 > span {
   margin-left: 5px;
   display: flex;
   align-items: center;
-  width: 150vh;
+  width: 110vh;
   height: 58px;
   gap: 20px;
   border: 1px solid #e9ecef;
@@ -133,8 +133,7 @@ header > section > div > h2 > span {
   height: 100%;
   gap: 15px;
 }
-.conteiner::-webkit-scrollbar {
-}
+
 .conteiner {
   margin-top: 15px;
   overflow-x: scroll;
