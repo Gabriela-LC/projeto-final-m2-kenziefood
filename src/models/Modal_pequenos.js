@@ -1,5 +1,6 @@
 import { Produto } from "../controllers/ProdutoController.js"
 import { Botoes } from "./Dashboard_Botoes.js"
+import { Filtrar } from "./Dashboard_Filtrar.js"
 import { Template } from "./Dashboard_Template.js"
 
 class ModalPequeno {
@@ -42,7 +43,7 @@ class ModalPequeno {
         sim.addEventListener('click', async (e) => {
             e.preventDefault()
             await Produto.deletarProduto(Botoes.id)
-            Template.template()
+            Template.template(await Filtrar.api())
             externo.remove()
         })
         button.addEventListener('click', async (e) => {
@@ -85,12 +86,12 @@ class ModalPequeno {
         const externo                   = document.createElement("div")
         const conteiner                 = document.createElement("div")
         const cabecalho                 = document.createElement("div")
-        const h2                        =document.createElement("h2")
+        const h2                        =document.createElement("button")
         const button                    =document.createElement("button")
         externo.classList.add("externo")
         conteiner.classList.add("conteinerLogout")
         cabecalho.classList.add("cabecalhoLogout")
-        h2.innerText                    ="Grupo 1"
+        h2.innerText                    ="Home"
         button.innerText                ="Logout"
         body.appendChild(externo)
         externo.appendChild(conteiner)
@@ -106,6 +107,10 @@ class ModalPequeno {
             e.preventDefault()
             localStorage.removeItem("token")
             window.location.href = "/src/pages/main.html"
+        })
+        h2.addEventListener('click',(e)=>{
+            e.preventDefault()
+            window.location.href="/src/pages/main.html"
         })
     }
 }
