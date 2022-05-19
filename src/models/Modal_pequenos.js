@@ -86,12 +86,12 @@ class ModalPequeno {
         const externo                   = document.createElement("div")
         const conteiner                 = document.createElement("div")
         const cabecalho                 = document.createElement("div")
-        const h2                        =document.createElement("h2")
+        const h2                        =document.createElement("button")
         const button                    =document.createElement("button")
         externo.classList.add("externo")
         conteiner.classList.add("conteinerLogout")
         cabecalho.classList.add("cabecalhoLogout")
-        h2.innerText                    ="Grupo 1"
+        h2.innerText                    ="Home"
         button.innerText                ="Logout"
         body.appendChild(externo)
         externo.appendChild(conteiner)
@@ -107,6 +107,10 @@ class ModalPequeno {
             e.preventDefault()
             localStorage.removeItem("token")
             window.location.href = "/src/pages/main.html"
+        })
+        h2.addEventListener('click',(e)=>{
+            e.preventDefault()
+            window.location.href="/src/pages/main.html"
         })
     }
 }
