@@ -18,7 +18,7 @@ async function coletaDados(event) {
   }
 }
 
-function modalAvisoCadastro(statusCadastro){
+function modalAvisoCadastro(erro){
 
   const divModal = document.createElement("div")
   divModal.classList.add("divModal")
@@ -28,9 +28,9 @@ function modalAvisoCadastro(statusCadastro){
 
   const textoModal = document.createElement("p")
 
-  if( statusCadastro == "User Already Exists!"){
+  if( erro == "User Already Exists!"){
     textoModal.innerText = "O email preenchido já foi cadastrado anteriormente. Favor utilizar um novo email."
-  } else if (statusCadastro.message == "Validation error: Deve ser um email valido"){
+  } else if (erro.message == "Validation error: Deve ser um email valido"){
     textoModal.innerText = "Email não válido. Favor preencher um email completo"
   }
   const btnFecharModal = document.createElement("button")

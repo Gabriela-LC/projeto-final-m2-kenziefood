@@ -1,3 +1,5 @@
+import { modalAvisoLogin } from "../models/modelLogin.js";
+
 class Usuario {
   static BASE_URL = "https://api-kenzie-food.herokuapp.com";
   static async criarUsuario(body) {
@@ -24,10 +26,17 @@ class Usuario {
       .then((res) => res.json())
       .then((res) => {
         localStorage.clear();
-        localStorage.setItem("token", res);
-        window.location = "../pages/main.html";
+        if (!res.error) {
+          localStorage.setItem("token", res);
+          window.location = "../pages/main.html";
+        } else {
+          console.log(res.error);
+          modalAvisoLogin(res.error)
+        }
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err)
+      });
     return usuario;
   }
 }
