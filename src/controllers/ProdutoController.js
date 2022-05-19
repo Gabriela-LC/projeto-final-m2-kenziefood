@@ -90,3 +90,5 @@ class Produto {
 }
 Produto.listaProdutoPrivado()
 export { Produto };
+
+// ModalPequeno.modalAvisos("Produto deletado com sucesso",true)
