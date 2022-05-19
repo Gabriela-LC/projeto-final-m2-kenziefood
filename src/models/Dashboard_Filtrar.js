@@ -27,5 +27,4 @@ class Filtrar {
     }
 
 }
-Filtrar.filtrar()
 export{ Filtrar}
