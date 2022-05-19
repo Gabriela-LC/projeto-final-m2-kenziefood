@@ -30,6 +30,6 @@ class Botoes {
     });
   }
 }
-// Botoes.Logout();
-// Botoes.adicionar();
+Botoes.Logout();
+Botoes.adicionar();
 export { Botoes };
