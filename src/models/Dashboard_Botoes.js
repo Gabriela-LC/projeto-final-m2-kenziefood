@@ -41,5 +41,4 @@ class Botoes {
         Bebidas.addEventListener('click',(e)=>Filtrar.filtroBotoes(e))
     }
 }
-
 export { Botoes }

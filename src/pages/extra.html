@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extra</title>
-    <link rel="stylesheet" href="/src/styles/reset.css" />
-    <link rel="stylesheet" href="/src/styles/extra.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/extra.css" />
   </head>
   <body>
     <header>
@@ -17,7 +17,7 @@
         </div>
         <div class="pesquisa">
           <form action="" id="pesquisa">
-            <input type="search" placeholder="Pesquisar por produto" />
+            <input id="pesquisar" type="search" placeholder="Pesquisar por produto" />
           </form>
         </div>
       </section>
@@ -27,8 +27,8 @@
         <div class="adicionar">
           <button id="adicionar">Adicionar novo produto</button>
         </div>
-        <ul id="menus">
-          <li id="Todos">Todos</li>
+        <ul class="menus">
+          <li id="Todos" class="Selecionado" >Todos</li>
           <li id="Panificadora">Panificadora</li>
           <li id="Frutas">Frutas</li>
           <li id="Bebidas">Bebidas</li>
@@ -41,13 +41,14 @@
           <h2 class="desc">Descrição</h2>
           <h2 class="acos">Ações</h2>
         </div>
-        <ul id="template">
-        </ul>
+        <ul id="template"></ul>
       </section>
     </main>
     <script type="module" src="/src/models/Modal_pequenos.js"></script>
     <script type="module" src="/src/controllers/ProdutoController.js"></script>
     <script type="module" src="/src/models/Dashboard.js"></script>
     <script type="module" src="/src/models/Dashboard_Template.js"></script>
+    <script type="module" src="/src/models/Dashboard_Filtrar.js"></script>
+    <script type="module" src="/src/js/chamarProduto.js"></script>
   </body>
 </html>

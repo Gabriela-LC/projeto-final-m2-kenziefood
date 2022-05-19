@@ -22,12 +22,14 @@ class Usuario {
       body: JSON.stringify(body),
     })
       .then((res) => res.json())
-      .then((res) => localStorage.setItem("token", res))
+      .then((res) => {
+        localStorage.clear();
+        localStorage.setItem("token", res);
+        window.location = "../pages/main.html";
+      })
       .catch((err) => console.error(err));
     return usuario;
   }
 }
-Usuario.conectar({email: "grupo1@gmail.com",
-password: "1234"})
-export { Usuario };
 
+export { Usuario };
