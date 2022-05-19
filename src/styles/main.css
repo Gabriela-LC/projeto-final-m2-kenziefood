@@ -477,6 +477,10 @@ button {
   background-color: #ff2253;
   color: #fafafa;
 }
+#btnFiltros:checked {
+  background-color: #ff2253;
+  color: #fafafa;
+}
 
 .categorias-produto {
   margin-top: 10px;

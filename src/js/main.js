@@ -3,34 +3,34 @@ import { Card } from "../models/CriarCards.js";
 
 function criaCard(data) {} */
 
-class paginasPerfil{
+class PaginasPerfil{
 
     static clickLogin(event){
 
         const getNome = event.target
-        
-        const containerHomeDash = document.getElementById("containerHomeDash")
-        const ImagemPerfilUsuario = document.getElementById("ImagemPerfilUsuario")
-        const bntLoginLogout = document.getElementById("bntLoginLogout")
-        const divPagina =  `<a href="../pages/main.html"><h2 id="paginaHome" class="statusPaginaOn">Home</h2></a>
-                            <a href="../pages/extra.html"><h2 id="paginaDash" class="statusPaginaOf">Dashboard</h2></a>`
-    
         if(getNome.innerHTML==="Login"){
-
-            
-            bntLoginLogout.innerHTML="Logout"
-            containerHomeDash.innerHTML= divPagina
-            ImagemPerfilUsuario.src="../styles/imgs/iconeUsuario.png"
+            window.location="../pages/login.html"
         }
         else if(getNome.innerHTML==="Logout"){
+            localStorage.clear();
             getNome.innerHTML="Login"
             ImagemPerfilUsuario.src=""
             containerHomeDash.innerHTML= ""
         }
 
     }
-    static trocaPagina(){
 
+    static sucessoLogin(){
+        const containerHomeDash = document.getElementById("containerHomeDash")
+        const ImagemPerfilUsuario = document.getElementById("ImagemPerfilUsuario")
+        const bntLoginLogout = document.getElementById("bntLoginLogout")
+
+        const divPagina =  `<a href="../pages/main.html"><h2 id="paginaHome" class="statusPaginaOn">Home</h2></a>
+                            <a href="../pages/extra.html"><h2 id="paginaDash" class="statusPaginaOf">Dashboard</h2></a>`
+
+        bntLoginLogout.innerHTML="Logout"
+        containerHomeDash.innerHTML= divPagina
+        ImagemPerfilUsuario.src="../styles/imgs/iconeUsuario.png"
     }
 }
 
@@ -38,10 +38,12 @@ class paginasPerfil{
 
 
 
-
-
+const dados = localStorage.getItem("token");
+if(dados){
+    PaginasPerfil.sucessoLogin()
+}
 const btnLoginHome = document.getElementById("bntLoginLogout")
-btnLoginHome.addEventListener("click",paginasPerfil.clickLogin)
+btnLoginHome.addEventListener("click",PaginasPerfil.clickLogin)
 
 
 // function populaLoja() {}
