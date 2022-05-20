@@ -10,8 +10,8 @@ body {
 }
 header {
   width: 100vw;
-  height: 10vh;
   margin-top: 2vh;
+  height: 15vh;
 }
 
 #logoKenzie {
