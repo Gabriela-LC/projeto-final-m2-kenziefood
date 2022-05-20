@@ -18,7 +18,7 @@ export class BotoesHome {
     const btnDashboard = document.createElement("button");
     btnDashboard.innerText = "Dashboard";
     btnDashboard.addEventListener("click", () => {
-      window.location = "./extra.html";
+      window.location = "/src/pages/extra.html";
     });
     divBotoesLogado.append(btnDashboard, btnLogout);
     const header = document.getElementsByTagName("header")[0];
@@ -27,16 +27,16 @@ export class BotoesHome {
   }
   static botoesNaoLogado() {
     const divBotoesNaoLogado = document.createElement("div");
-    divBotoesLogado.classList.add("divBotoes");
+    divBotoesNaoLogado.classList.add("divBotoes");
     const btnCadastrar = document.createElement("button");
     btnCadastrar.innerText = "Cadastrar";
     btnCadastrar.addEventListener("click", () => {
-      window.location = "";
+      window.location = "/src/pages/cadastro.html";
     });
     const btnLogin = document.createElement("button");
     btnLogin.innerText = "Login";
     btnLogin.addEventListener("click", () => {
-      window.location = "";
+      window.location = "/src/pages/login.html";
     });
     divBotoesNaoLogado.append(btnCadastrar, btnLogin);
     const header = document.getElementsByTagName("header")[0];

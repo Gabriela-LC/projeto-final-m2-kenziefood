@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../styles/cadastro.css" />
+    <!-- pagina cadastro -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1 class="logo_preto">
+          Kenzie
+          <h2 class="logo_vermelho">Food</h2>
+        </h1>
+      </div>
+    </header>
+    <main>
+      <h2 class="subtitulo">Cadastre-se</h2>
+      <form action="" id="form_cadastrar_usuario">
+        <input
+          class="input"
+          type="text"
+          name="name"
+          placeholder="Nome de Usuário"
+          required
+        />
+        <input
+          class="input"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+
+        <input
+          class="input"
+          type="password"
+          name="password"
+          placeholder="Senha"
+          required
+        />
+        <button type="submit" id="botao_cadastrar_usuario">Cadastrar</button>
+      </form>
+    </main>
+    <footer class="redirecionando">
+      <h3 class="titulo_redireciona">
+        Já é cadastrado?
+        <a href="/src/pages/login.html">Clique aqui</a>
+      </h3>
+    </footer>
+    <script type="module" src="../js/cadastro.js"></script>
+  </body>
+</html>

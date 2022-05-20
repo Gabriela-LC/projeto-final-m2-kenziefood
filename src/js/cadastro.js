@@ -11,35 +11,35 @@ async function coletaDados(event) {
   formCadastrar.reset();
   const statusCadastro = await UsuarioController.criarUsuario(novoUsuario);
   if (statusCadastro.id) {
-    window.location = "./src/pages/login.html";
+    window.location = "/src/pages/login.html";
   } else {
-    modalAvisoCadastro(statusCadastro)
+    modalAvisoCadastro(statusCadastro);
     console.error(statusCadastro);
   }
 }
 
-function modalAvisoCadastro(erro){
+function modalAvisoCadastro(erro) {
+  const divModal = document.createElement("div");
+  divModal.classList.add("divModal");
 
-  const divModal = document.createElement("div")
-  divModal.classList.add("divModal")
+  const tituloModal = document.createElement("h3");
+  tituloModal.innerText = "Atenção!";
 
-  const tituloModal = document.createElement("h3")
-  tituloModal.innerText = "Atenção!"
+  const textoModal = document.createElement("p");
 
-  const textoModal = document.createElement("p")
-
-  if( erro == "User Already Exists!"){
-    textoModal.innerText = "O email preenchido já foi cadastrado anteriormente. Favor utilizar um novo email."
-  } else if (erro.message == "Validation error: Deve ser um email valido"){
-    textoModal.innerText = "Email não válido. Favor preencher um email completo"
+  if (erro == "User Already Exists!") {
+    textoModal.innerText =
+      "O email preenchido já foi cadastrado anteriormente. Favor utilizar um novo email.";
+  } else if (erro.message == "Validation error: Deve ser um email valido") {
+    textoModal.innerText =
+      "Email não válido. Favor preencher um email completo";
   }
-  const btnFecharModal = document.createElement("button")
-  btnFecharModal.innerText = "Fechar"
+  const btnFecharModal = document.createElement("button");
+  btnFecharModal.innerText = "Fechar";
   btnFecharModal.addEventListener("click", () => {
-      divModal.remove()
-  })
+    divModal.remove();
+  });
 
-  divModal.append(tituloModal,textoModal,btnFecharModal)
-  document.body.append(divModal)
-
+  divModal.append(tituloModal, textoModal, btnFecharModal);
+  document.body.append(divModal);
 }

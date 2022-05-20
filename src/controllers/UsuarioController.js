@@ -28,14 +28,14 @@ class Usuario {
         localStorage.clear();
         if (!res.error) {
           localStorage.setItem("token", res);
-          window.location = "../pages/main.html";
+          window.location.href = "/index.html";
         } else {
           console.log(res.error);
-          modalAvisoLogin(res.error)
+          modalAvisoLogin(res.error);
         }
       })
       .catch((err) => {
-        console.error(err)
+        console.error(err);
       });
     return usuario;
   }

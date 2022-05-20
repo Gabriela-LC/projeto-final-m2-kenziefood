@@ -4,53 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="./src/styles/cadastro.css" />
-    <!-- pagina cadastro -->
+    <title>Main</title>
+    <link rel="stylesheet" href="./src/styles/resetMain.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" media="screen and (min-width: 551px)"/>
+    <link rel="stylesheet" href="./src/styles/mainMobile.css" media="screen and (max-width: 550px)"/>
+
+    <!-- pagina main -->
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <h1 class="logo_preto">
-          Kenzie
-          <h2 class="logo_vermelho">Food</h2>
-        </h1>
-      </div>
+    <header>
+      
+        <div id="logoKenzie" class="styleLogoKenzie">
+          <h1 id="Kenzie">Kenzie</h1>
+          <p id="pFood">Food</p>
+        </div>
+        <div id="barraPesquisa" class="pesquisaStyle">
+            <img src="./src/styles/imgs/lupa.png" alt="lupa" id="lupa">
+            <input type="text" placeholder="Pesquisar por produto" id="inputSearch">
+        </div>
+      
     </header>
-    <main>
-      <h2 class="subtitulo">Cadastre-se</h2>
-      <form action="" id="form_cadastrar_usuario">
-        <input
-          class="input"
-          type="text"
-          name="name"
-          placeholder="Nome de Usuário"
-          required
-        />
-        <input
-          class="input"
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-
-        <input
-          class="input"
-          type="password"
-          name="password"
-          placeholder="Senha"
-          required
-        />
-        <button type="submit" id="botao_cadastrar_usuario">Cadastrar</button>
-      </form>
-    </main>
-    <footer class="redirecionando">
-      <h3 class="titulo_redireciona">
-        Já é cadastrado?
-        <a href="./src/pages/login.html">Clique aqui</a>
-      </h3>
+    <nav>
+      <ul id="filtragem">
+       <li><button class="btnFiltroTodos" id="btnFiltros">Todos</button></li> 
+        <li><button id="btnPao" class="btnFiltro "><img src="./src/styles/imgs/bread.svg" alt="pao" id="iconPao" class="iconFilter" >Panificadora</button> </li>
+        <li><button id="btnFruta" class="btnFiltro "><img src="./src/styles/imgs/fruits.svg" alt="fruta" id="iconFruta" class="iconFilter">Frutas</button></li> 
+        <li><button id="btnBebida" class="btnFiltro "><img src="./src/styles/imgs/drink.svg" alt="bebida" id="iconBebida" class="iconFilter">Bebidas</button></li>
+      </ul>
+    </nav>
+    <section>
+    <!-- produtos -->
+    <ul id="containerProdutos">
+    </ul>
+    <div id="divCarrinho">  
+      <div id="sacolaCarrinho">
+        <div id="cabecarioCarrinho">Carrinho</div>
+        <ul id="ulCarrinho">
+        </ul>   
+      <div id="divQuantidadeCarrinho">
+        <p class="carrinhoQuantidade">Quantidade</p>
+        <p class="carrinhoTotalQuantidade">0</p>
+      </div>
+      <div id="divTotalCarrinho">
+        <p class="carrinhoPreco">Preço</p>
+        <p class="carrinhoTotal">R$ 0.00</p>
+      </div>
+    </div>
+    </section>
+      
+    <footer>
+        <button id="btnCarrinho">carrinho</button>                 
     </footer>
-    <script type="module" src="./src/js/cadastro.js"></script>
+
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
