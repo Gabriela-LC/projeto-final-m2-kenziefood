@@ -27,7 +27,7 @@ class Card {
     div.classList.add("addCarrinho");
     div.setAttribute("id", data.id);
     const logoCarrinho = document.createElement("img");
-    logoCarrinho.src = "../styles/imgs/carrinho.svg";
+    logoCarrinho.src = "./src/styles/imgs/carrinho.svg";
     div.appendChild(logoCarrinho);
     div.addEventListener("click", this.processoCarrinho);
     produto.append(figure, h3, p, categoriaProduto, span, div);
@@ -58,7 +58,7 @@ class Card {
     divRemover.addEventListener("click", Card.removerItem);
     const imgLixeira = document.createElement("img");
     imgLixeira.classList.add("imgLixo");
-    imgLixeira.src = "../styles/imgs/trash.png";
+    imgLixeira.src = "./src/styles/imgs/trash.png";
     divRemover.appendChild(imgLixeira);
     liCarrinho.append(img, divDados, divRemover);
     ul.appendChild(liCarrinho);

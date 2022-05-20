@@ -1,5 +1,8 @@
 import { Produto } from "../controllers/ProdutoController.js";
 import { Card } from "../models/CriarCards.js";
+import { BotoesHome } from "../models/BotoesHome.js";
+
+BotoesHome.verificarLogin();
 
 const listaProdutosApi = await Produto.listaProdutoPublico();
 const categoriaTodos = document.getElementById("btnFiltros");

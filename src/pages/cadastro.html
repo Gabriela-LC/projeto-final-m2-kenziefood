@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/login.css" />
-    <!-- pagina login -->
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../styles/cadastro.css" />
+    <!-- pagina cadastro -->
   </head>
   <body>
     <header class="header">
@@ -19,10 +18,16 @@
       </div>
     </header>
     <main>
-      <h2 class="subtitulo">Já é cadastrado? Faça seu login</h2>
-      <form action="" id="form_login_usuario">
+      <h2 class="subtitulo">Cadastre-se</h2>
+      <form action="" id="form_cadastrar_usuario">
         <input
-          id="inputEmail"
+          class="input"
+          type="text"
+          name="name"
+          placeholder="Nome de Usuário"
+          required
+        />
+        <input
           class="input"
           type="email"
           name="email"
@@ -31,23 +36,21 @@
         />
 
         <input
-          id="inputSenha"
           class="input"
           type="password"
           name="password"
           placeholder="Senha"
           required
         />
-        <button type="submit" id="botao_login_usuario">Entrar</button>
+        <button type="submit" id="botao_cadastrar_usuario">Cadastrar</button>
       </form>
     </main>
     <footer class="redirecionando">
       <h3 class="titulo_redireciona">
-        Ainda não é cadastrado?
-        <a href="./cadastro.html">Clique aqui</a>
+        Já é cadastrado?
+        <a href="/src/pages/login.html">Clique aqui</a>
       </h3>
     </footer>
-    <script type="module" src="../js/login.js"></script>
-    <script type="module" src="../models/modelLogin.js"></script>
+    <script type="module" src="../js/cadastro.js"></script>
   </body>
 </html>

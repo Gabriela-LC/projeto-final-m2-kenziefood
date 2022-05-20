@@ -509,3 +509,24 @@ button {
    display: none;
      display: inline-flex; 
 } */
+
+.divBotoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.divBotoes button {
+  box-sizing: border-box;
+  background-color: #ff2253;
+  color: #ffffff;
+  padding: 10px 20px;
+  width: 110px;
+  border: none;
+  border-radius: 32px;
+  font-size: 15px;
+}
+.divBotoes button:hover {
+  background-color: #ffffff;
+  color: #ff2253;
+  cursor: pointer;
+}
