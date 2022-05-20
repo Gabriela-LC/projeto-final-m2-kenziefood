@@ -7,9 +7,48 @@
     <title>Extra</title>
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/extra.css" />
-    <!-- pagina extra -->
   </head>
   <body>
-    <script type="module" src="../js/extra.js"></script>
+    <header>
+      <section>
+        <div class="logo">
+          <h2>Kenzie <span>Food</span></h2>
+          <span id="user"> </span>
+        </div>
+        <div class="pesquisa">
+          <form action="" id="pesquisa">
+            <input id="pesquisar" type="search" placeholder="Pesquisar por produto" />
+          </form>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <div class="adicionar">
+          <button id="adicionar">Adicionar novo produto</button>
+        </div>
+        <ul class="menus">
+          <li id="Todos" class="Selecionado" >Todos</li>
+          <li id="Panificadora">Panificadora</li>
+          <li id="Frutas">Frutas</li>
+          <li id="Bebidas">Bebidas</li>
+        </ul>
+      </section>
+      <section class="conteiner">
+        <div class="secao">
+          <h2>Produto</h2>
+          <h2 class="categ">Categorias</h2>
+          <h2 class="desc">Descrição</h2>
+          <h2 class="acos">Ações</h2>
+        </div>
+        <ul id="template"></ul>
+      </section>
+    </main>
+    <script type="module" src="/src/models/Modal_pequenos.js"></script>
+    <script type="module" src="/src/controllers/ProdutoController.js"></script>
+    <script type="module" src="/src/models/Dashboard.js"></script>
+    <script type="module" src="/src/models/Dashboard_Template.js"></script>
+    <script type="module" src="/src/models/Dashboard_Filtrar.js"></script>
+    <script type="module" src="/src/js/chamarProduto.js"></script>
   </body>
 </html>
