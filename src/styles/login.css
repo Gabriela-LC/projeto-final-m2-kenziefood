@@ -119,6 +119,7 @@ form > button {
   line-height: 30px;
   color: #212529;
   font-weight: normal;
+  text-align: center;
 }
 
 .titulo_redireciona > a {
@@ -131,7 +132,7 @@ form > button {
   border: 1px solid #ff2253;
 }
 
-.divModal{
+.divModal {
   z-index: 2;
   position: fixed;
   width: 330px;
@@ -145,21 +146,19 @@ form > button {
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   padding: 10px;
-
 }
 
-.divModal h3{
+.divModal h3 {
   color: #212529;
   font-weight: 700;
   font-size: 30px;
-
 }
 
 .divModal p {
   text-align: center;
 }
 
-.divModal button{
+.divModal button {
   font-family: "Inter", sans-serif;
   background-color: #ff2253;
   color: white;
@@ -170,7 +169,6 @@ form > button {
   font-size: 18px;
   padding: 12px 30px;
 }
-
 
 @media (max-width: 350px) {
   .logo_preto {
@@ -195,11 +193,9 @@ form > button {
     font-size: 12px;
   }
 
-  .divModal{
+  .divModal {
     width: 300px;
-  
   }
-
 }
 
 @media (min-width: 800px) {
@@ -226,9 +222,7 @@ form > button {
     font-size: 22px;
   }
 
-  .divModal{
+  .divModal {
     width: 380px;
-  
   }
-
 }
